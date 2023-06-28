@@ -34,8 +34,8 @@ export function Projects() {
         {
           data.map(item => (
             <div key={item.idDoc} className="bg-stone-300 p-5 rounded-lg hover:bg-blue-200 hover:text-stone-800">
-              <div className="font-bold flex justify-between text-xl mb-3">
-                <div>{item?.titulo}</div>
+              <div className="font-bold flex justify-between items-start text-xl mb-3">
+                <div className='w-4/5'>{item?.titulo}</div>
                 {uid && <button onClick={() => handleDelete(item.idDoc)} className="ml-3">
                   <img src="./public/delete.svg" alt="eliminar" className="w-6 h-6" />
                 </button>}
