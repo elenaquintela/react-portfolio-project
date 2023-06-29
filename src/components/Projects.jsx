@@ -27,20 +27,21 @@ export function Projects() {
     deletePrueba(idDoc)
   }
 
+
   return (
     <>
       <h1 className="text-2xl font-semibold text-white mb-4 text-right bg-slate-800 p-4">Mis proyectos</h1>
       <div className="grid grid-cols-4 gap-4">
         {
           data.map(item => (
-            <div key={item.idDoc} className="bg-stone-300 p-5 rounded-lg hover:bg-blue-200 hover:text-stone-800">
-              <div className="font-bold flex justify-between items-start text-xl mb-3">
-                <div className='w-4/5'>{item?.titulo}</div>
-                {uid && <button onClick={() => handleDelete(item.idDoc)} className="ml-3">
+            <div key={item.idDoc} className="flex flex-col justify-between items-start bg-stone-300 p-5 rounded-lg hover:bg-blue-200 hover:text-stone-800">
+              <div className="font-bold flex w-full justify-between items-start text-xl mb-3">
+                <div className='w-4/5 line-clamp-3'>{item?.titulo}</div>
+                {uid && <button onClick={() => handleDelete(item.idDoc)} >
                   <img src="./public/delete.svg" alt="eliminar" className="w-6 h-6" />
                 </button>}
               </div>
-              <div className='mb-4'>{item?.descripcion}</div>
+              <div className='mb-4 line-clamp-5'>{item?.descripcion}</div>
 
               <a href={item?.github} rel='noreferrer' target='_blank' className="relative inline-block text-lg group">
                 <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">

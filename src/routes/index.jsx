@@ -21,8 +21,7 @@ export const router = createBrowserRouter([
       {
         path: "nuevo-proyecto",
         element: <ProjectsForm />
-      },
-
+      }
     ],
   },
 ]);

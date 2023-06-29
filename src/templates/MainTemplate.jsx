@@ -8,7 +8,7 @@ export function MainTemplate() {
       <h1 className='text-3xl'>Portfolio de Elena Quintela</h1>
       <NavBar />
     </header>
-    <main className='bg-stone-200 h-screen'>
+    <main className='bg-stone-200 h-full'>
       <Outlet />
     </main>
   </>
