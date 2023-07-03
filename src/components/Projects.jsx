@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { deleteDocument, getDocuments } from '../helpers/firebase/CloudFirestore'
 import { UserContext } from '../context/UserContext'
+import deleteLogo from '../assets/delete.svg'
 
 export function Projects() {
   const { uid } = useContext(UserContext)
@@ -38,7 +39,7 @@ export function Projects() {
               <div className="font-bold flex w-full justify-between items-start text-xl mb-3">
                 <div className='w-4/5 line-clamp-3'>{item?.titulo}</div>
                 {uid && <button onClick={() => handleDelete(item.idDoc)} >
-                  <img src="./public/delete.svg" alt="eliminar" className="w-6 h-6" />
+                  <img src={deleteLogo} alt="eliminar" className="w-6 h-6" />
                 </button>}
               </div>
               <div className='mb-4 line-clamp-5'>{item?.descripcion}</div>
